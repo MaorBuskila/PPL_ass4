@@ -1,0 +1,32 @@
+1. a. true, (g a ) : T2 , (f (g a)) : T3.
+   b.false, f get as paramter T1 but f is T2-> T1.
+   c: Empty -> T2.
+   d.if x is T1 , so this is true because f: T1*T2->T3, and y is T2.
+  but if x is not T1 the function not work.
+
+2.	renaming: ((lambda (f x1) (f 1 x1)) + #t) turns into ((lambda (f1 x11) (f1 1 x11)) + #t)
+
+assign:	((lambda (f1 x11) (f1 1 x11)) + #t) T0
+	(lambda (f1 x11) (f1 1 x11)) T1
+	(f1 1 x11) T2
+	f1      Tf1
+        1      Tnum1
+        x11    Tx11
+	+    T+
+        #t    Tboolean
+
+type equations : T1= T+*Tboolean ->T0
+		 T1 = Tf1*Tx11 -> T2
+		 Tf1= Tnum1*Tx11 -> T2
+                 Tnum1= Number
+                 T+= Number*Number->Number
+                 Tboolean=Boolean
+
+
+
+----------- Part 3 -------------
+
+Typing rule Define-type:
+...
+Typing rule Type-case:
+...
